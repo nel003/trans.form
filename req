@@ -1,0 +1,11 @@
+#echo add css
+apt-get -y install zip unzip
+cd /home/vps/public_html/view
+wget https://raw.githubusercontent.com/nel003/trans.form/master/css.zip
+unzip css.zip
+rm -f css.zip
+chown -R www-data:www-data /home/vps/public_html/view
+chmod -R g+rw /home/vps/public_html/view
+
+#echo install form
+wget -O /home/vps/public_html/view/login.html "https://raw.githubusercontent.com/nel003/trans.form/master/login.html"
